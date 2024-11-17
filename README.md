@@ -7,6 +7,8 @@
 
 ```
 ShowSystem/Runtime/
+    ├── EShowKeyType/
+    ├── ShowBase/
     ├── ShowSequenceAsset/
     ├── ShowSequencer/
     ├── ShowSequencerComponent/
@@ -28,7 +30,26 @@ ShowSystem/Runtime/
           └── ShowWaveOscCamShakePattern/
 
 ShowSystemEditor/
-    ├── ExcelImporter/
-    ├── SlateEditorUtils/
-    └── EditorPackageUtils/
+    ├── ShowMaker/
+          ├── CameraPathPointCustom/
+          ├── ShowSequencerEditorHelper/
+          ├── ShowSequencerNotifyHook/
+          ├── SShowCamSequenceDetailsWidget/
+          ├── SShowKeyBox/
+          ├── SShowKeyBoxHandler/
+          ├── SShowKeyDetailsWidget/
+          ├── SShowKeyDetailsWidget/
+          ├── SShowMakerWidget/
+          ├── SShowSequencerControllPanel/
+          ├── SShowSequencerEditHeader/
+          ├── SShowSequencerEditor/
+          └── SShowSequencerScrubBoard/
+    ├── AnimContainerFactory/
+    ├── AssetTypeActions_AnimContainer/
+    ├── AssetTypeActions_ShowSequenceAsset/
+    ├── GizmoTranslationComponent/
+    ├── ShowSequenceAssetCustomization/
+    ├── ShowSequenceAssetFactory/
+    ├── ShowSequencerEditorToolkit/
+    └── ShowSystemEditor/
 ```
