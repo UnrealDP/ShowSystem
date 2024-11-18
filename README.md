@@ -4,7 +4,8 @@
 2. 언리얼의 Sequencer를 상상하면 비슷한 기능이다.
 3. 애니메이션 플레이, 파티클 플레이, 카메라 연출 등의 기능이 하나의 Key로 설정이 가능하다.
 4. 추가 기능은 Key를 정의하고 기능을 구현하면 툴에서 간단하게 연출 파일을 편집할 수 있다.
-### 파일 구조
+   
+### File
 
 - **ShowSystem/Runtime/**
   - [EShowKeyType](#eshowkeytype)
@@ -60,7 +61,7 @@
 .
 .
 
-### EShowKeyType [Top](#파일 구조)
+### EShowKeyType [Top](#File)
 EShowKeyType은 Key의 종류를 정의한 Enum 또는 Struct 집합입니다.
 
 EShowKeyType은 Key의 종류를 정의한 Enum 또는 Struct 집합입니다.
