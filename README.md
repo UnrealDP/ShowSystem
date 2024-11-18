@@ -7,7 +7,7 @@
 
 ```
 ShowSystem/Runtime/
-    ├── [EShowKeyType](#eshowkeytype)
+    ├── EShowKeyType # 설명은 [EShowKeyType](#eshowkeytype) 참고
     ├── ShowBase/
     ├── ShowSequenceAsset/
     ├── ShowSequencer/
