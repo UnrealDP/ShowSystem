@@ -9,7 +9,7 @@
 
 - **ShowSystem/Runtime/**
   - [EShowKeyType](#eshowkeytype)
-  - ShowBase/
+  - [ShowBase](#showbase)
   - ShowSequenceAsset/
   - ShowSequencer/
   - ShowSequencerComponent/
@@ -52,20 +52,43 @@
   - ShowSequenceAssetFactory/
   - ShowSequencerEditorToolkit/
   - ShowSystemEditor/
-.
-.
-.
-.
-.
-.
-.
-.
+<br/>
+
 
 ### EShowKeyType
-EShowKeyType은 Key의 종류를 정의한 Enum 또는 Struct 집합입니다.
-[Top](#File)
+EShowKeyType은 Show Key의 종류를 정의한 Enum. 새로운 key를 추가할 경우 필히 enum을 추가해야함.
+<br/>[Top](#File)<br/>
 
-EShowKeyType은 Key의 종류를 정의한 Enum 또는 Struct 집합입니다.
+### ShowBase
+편집된 실제 데이터 FShowKey를 정의한 파일.<br/>
+데이터인 FShowKey로 생성한 인스턴스인 UShowBase를 정의한 파일.<br/>
+Base struct와 class로 다양한 기능의 Key들은 상속받아서 구현된다.<br/>
+<pre>
+virtual void Initialize() PURE_VIRTUAL(UShowBase::Initialize, );
+   - Key가 인스턴스 생성되면서 최초 호출되는 함수
+   
+virtual void Dispose() PURE_VIRTUAL(UShowBase::Dispose, );
+   - Key가 삭제되면서 호출되는 소멸 함수
+   
+virtual void Play() PURE_VIRTUAL(UShowBase::Play, );
+   - Key가 StartTime이 지나서 플레이 시작될 때 호출되는 함수
+   
+virtual void Stop() PURE_VIRTUAL(UShowBase::Stop, );
+   - Key를 멈출때 호출되는 함수 (이 곳에서 멈춤 처리를 해줘야 한다)
+   
+virtual void Reset() PURE_VIRTUAL(UShowBase::Reset, );
+   - Key를 다시 플레이 하기 위해 초기화로 불리는 함수 (대부분 툴에서 호출되는 함수)
+   
+virtual void Tick(float ScaleDeltaTime, float SystemDeltaTime, float BasePassedTime) PURE_VIRTUAL(UShowBase::Tick, );
+   - ScaleDeltaTime : Show 내부 TimeScale 적용된 시간 변화량
+   - SystemDeltaTime : Owner로 부터 호출되는 시스템 시간 변화량
+   - BasePassedTime : TimeScale 적용된 현재 Key의 플레이된 지난 총 시간
+      
+virtual void ApplyTimeScale(float FinalTimeScale) PURE_VIRTUAL(UShowBase::ApplyTimeScale, );
+   - 왜부에서 TimeScale을 변화해서 실제 최종 Key에 적용되어야 하는 FinalTimeScale 값으로 호출함 (여기서 실제 시간 변화에 대한 코드 해야함)
+</pre>
+
+<br/>[Top](#File)<br/>
 
 <h3 id="showbase">ShowBase</h3>
 ShowBase는 ShowSystem의 기본 클래스로, 공통 기능을 제공합니다
