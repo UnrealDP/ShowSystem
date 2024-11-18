@@ -63,7 +63,7 @@ ShowSystemEditor/
 .
 .
 
-<h3 id="eshowkeytype">EShowKeyType</h3> <a href="#top">Top</a>
+<h3 style="display: inline;">EShowKeyType</h3> <a href="#top" style="margin-left: 10px;">Top</a>
 EShowKeyType은 Key의 종류를 정의한 Enum 또는 Struct 집합입니다.
 
 <h3 id="showbase">ShowBase</h3>
