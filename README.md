@@ -7,7 +7,7 @@
 
 ```
 ShowSystem/Runtime/
-    ├── EShowKeyType/
+    ├── [EShowKeyType](#eshowkeytype)
     ├── ShowBase/
     ├── ShowSequenceAsset/
     ├── ShowSequencer/
@@ -53,3 +53,6 @@ ShowSystemEditor/
     ├── ShowSequencerEditorToolkit/
     └── ShowSystemEditor/
 ```
+
+### EShowKeyType
+EShowKeyType은 ShowSystem에서 Key의 종류를 정의한 Enum 또는 Struct 집합입니다.
