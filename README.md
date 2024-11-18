@@ -10,11 +10,11 @@
 - **ShowSystem/Runtime/**
   - [EShowKeyType](#eshowkeytype)
   - [ShowBase](#showbase)
-  - ShowSequenceAsset/
-  - ShowSequencer/
-  - ShowSequencerComponent/
-  - ShowPlayer/
-  - ShowSystem/
+  - [ShowSequenceAsset](#ShowSequenceAsset)
+  - [ShowSequencer](#ShowSequencer)
+  - [ShowSequencerComponent](#ShowSequencerComponent)
+  - [ShowPlayer](#ShowPlayer)
+  - [ShowSystem](#ShowSystem)
   - ShowKeys/
     - ShowAnimStatic/
     - ShowCamSequence/
@@ -90,6 +90,47 @@ virtual void ApplyTimeScale(float FinalTimeScale) PURE_VIRTUAL(UShowBase::ApplyT
 
 <br/>[Top](#File)<br/>
 
-<h3 id="showbase">ShowBase</h3>
-ShowBase는 ShowSystem의 기본 클래스로, 공통 기능을 제공합니다
+### ShowSequenceAsset
+ShowSequenceAsset 은 TArray<FInstancedStruct> ShowKeys 를 맴버로 들고 있으며 FShowKey를 상속받은 struct를 Array로 가진다.<br/>
+Key를 가지고 있는 순수한 데이터 어셋
+<br/>[Top](#File)<br/>
+
+
+### ShowSequencer
+ShowSequencer 는 ShowSequenceAsset 데이터로 연출을 하기 위해 생성되는 인스턴스<br/>
+연출 소유자인 Owner 설정이 필수다. void Initialize(AActor* InShowOwner, TObjectPtr<UShowSequenceAsset> InShowSequenceAsset); 
+<br/>[Top](#File)<br/>
+
+### ShowSequencerComponent
+ShowSequencerComponent 는 ShowSequencer 를 관리하는 Component
+<br/>[Top](#File)<br/>
+
+### ShowPlayer
+ShowPlayer 는 ShowSequencer 를 플레이하는 인터페이스.
+<br/>[Top](#File)<br/>
+
+### ShowSystem
+ShowSystem 은 ShowSystem을 구동하는데 필요한 기본 정의와 툴에서 필요한 기본 기능을 정의하는 클래스<br/>
+새로운 키를 추가하게 되면 필히 이곳에 추가된 키에 대한 코딩이 필요하다.
+<br/>[Top](#File)<br/>
+
+### EShowKeyType
+EShowKeyType은 Show Key의 종류를 정의한 Enum. 새로운 key를 추가할 경우 필히 enum을 추가해야함.
+<br/>[Top](#File)<br/>
+
+### EShowKeyType
+EShowKeyType은 Show Key의 종류를 정의한 Enum. 새로운 key를 추가할 경우 필히 enum을 추가해야함.
+<br/>[Top](#File)<br/>
+
+### EShowKeyType
+EShowKeyType은 Show Key의 종류를 정의한 Enum. 새로운 key를 추가할 경우 필히 enum을 추가해야함.
+<br/>[Top](#File)<br/>
+
+### EShowKeyType
+EShowKeyType은 Show Key의 종류를 정의한 Enum. 새로운 key를 추가할 경우 필히 enum을 추가해야함.
+<br/>[Top](#File)<br/>
+
+### EShowKeyType
+EShowKeyType은 Show Key의 종류를 정의한 Enum. 새로운 key를 추가할 경우 필히 enum을 추가해야함.
+<br/>[Top](#File)<br/>
 
