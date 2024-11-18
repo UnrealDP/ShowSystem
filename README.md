@@ -6,7 +6,7 @@
 4. 추가 기능은 Key를 정의하고 기능을 구현하면 툴에서 간단하게 연출 파일을 편집할 수 있다.
 ### 파일 구조
 
-
+[](#Top)
 - **ShowSystem/Runtime/**
   - [EShowKeyType](#eshowkeytype)
   - ShowBase/
@@ -61,7 +61,7 @@
 .
 .
 
-### EShowKeyType [Top](#top)
+### EShowKeyType 
 EShowKeyType은 Key의 종류를 정의한 Enum 또는 Struct 집합입니다.
 
 EShowKeyType은 Key의 종류를 정의한 Enum 또는 Struct 집합입니다.
