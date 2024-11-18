@@ -5,7 +5,7 @@
 3. 애니메이션 플레이, 파티클 플레이, 카메라 연출 등의 기능이 하나의 Key로 설정이 가능하다.
 4. 추가 기능은 Key를 정의하고 기능을 구현하면 툴에서 간단하게 연출 파일을 편집할 수 있다.
    
-### File
+File
 
 - **ShowSystem/Runtime/**
   - [EShowKeyType](#eshowkeytype)
