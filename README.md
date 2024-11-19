@@ -32,26 +32,26 @@
 
 - **ShowSystemEditor/**
   - ShowMaker/
-    - CameraPathPointCustom/
-    - ShowSequencerEditorHelper/
-    - ShowSequencerNotifyHook/
-    - SShowCamSequenceDetailsWidget/
-    - SShowKeyBox/
-    - SShowKeyBoxHandler/
-    - SShowKeyDetailsWidget/
-    - SShowMakerWidget/
-    - SShowSequencerControllPanel/
-    - SShowSequencerEditHeader/
-    - SShowSequencerEditor/
-    - SShowSequencerScrubBoard/
-  - AnimContainerFactory/
-  - AssetTypeActions_AnimContainer/
-  - AssetTypeActions_ShowSequenceAsset/
-  - GizmoTranslationComponent/
-  - ShowSequenceAssetCustomization/
-  - ShowSequenceAssetFactory/
-  - ShowSequencerEditorToolkit/
-  - ShowSystemEditor/
+    - [CameraPathPointCustom](#CameraPathPointCustom)
+    - [ShowSequencerEditorHelper](#ShowSequencerEditorHelper)
+    - [ShowSequencerNotifyHook](#ShowSequencerNotifyHook)
+    - [SShowCamSequenceDetailsWidget](#SShowCamSequenceDetailsWidget)
+    - [SShowKeyBox](#SShowKeyBox)
+    - [SShowKeyBoxHandler](#SShowKeyBoxHandler)
+    - [SShowKeyDetailsWidget](#SShowKeyDetailsWidget)
+    - [SShowMakerWidget](#SShowMakerWidget)
+    - [SShowSequencerControllPanel](#SShowSequencerControllPanel)
+    - [SShowSequencerEditHeader](#SShowSequencerEditHeader)
+    - [SShowSequencerEditor](#SShowSequencerEditor)
+    - [SShowSequencerScrubBoard](#SShowSequencerScrubBoard)
+  - AnimContainerFactory : UFactory
+  - AssetTypeActions_AnimContainer : FAssetTypeActions_Base
+  - AssetTypeActions_ShowSequenceAsset : FAssetTypeActions_Base
+  - [GizmoTranslationComponent](#GizmoTranslationComponent)
+  - [ShowSequenceAssetCustomization](#ShowSequenceAssetCustomization)
+  - ShowSequenceAssetFactory : UFactory
+  - ShowSequencerEditorToolkit : FAssetEditorToolkit
+  - ShowSystemEditor : IModuleInterface
 <br/>
 
 
@@ -156,49 +156,87 @@ TODO: (DIPI) ShowNiagara 는 아직 미구현 (ShowCascade와 동작 법은 똑�
 
 ### AnimContainer
 애니메이션 정의 데이터<br/>
-임시 테스트용. 애니메이션 시스템에 맞춰 삭제 혹은 변경해야 한다.<br/>
+임시 테스트용. 애니메이션 시스템에 맞춰 삭제 혹은 변경해야 한다.
 <br/>[Top](#File)<br/>
 
 ### ShowAnimInstance
 애니메이션 관리하는 클래스 UAnimInstance 상속<br/>
-임시 테스트용. 애니메이션 시스템에 맞춰 삭제 혹은 변경해야 한다.<br/>
+임시 테스트용. 애니메이션 시스템에 맞춰 삭제 혹은 변경해야 한다.
 <br/>[Top](#File)<br/>
 
 ### ShowCameraShakeBase
-특별한 기능은 없고 카메라 쉐이크를 하기 위한 Base Class. UCameraShakeBase 상속함.<br/>
+특별한 기능은 없고 카메라 쉐이크를 하기 위한 Base Class. UCameraShakeBase 상속함.
 <br/>[Top](#File)<br/>
 
 ### ShowPerlinNoiseCamShakePattern
-언리얼 지원 카메레 쉐이크인 UPerlinNoiseCameraShakePattern 상속받아 Show용으로 만든 Calss.<br/>
+언리얼 지원 카메레 쉐이크인 UPerlinNoiseCameraShakePattern 상속받아 Show용으로 만든 Calss.
 <br/>[Top](#File)<br/>
 
 ### ShowSequenceCamShakePattern
-언리얼 지원 카메레 쉐이크인 UCameraShakePattern 상속받아 Show용으로 만든 Calss.<br/>
+언리얼 지원 카메레 쉐이크인 UCameraShakePattern 상속받아 Show용으로 만든 Calss.
 <br/>[Top](#File)<br/>
 
 ### ShowWaveOscCamShakePattern
-언리얼 지원 카메레 쉐이크인 UWaveOscillatorCameraShakePattern 상속받아 Show용으로 만든 Calss.<br/>
+언리얼 지원 카메레 쉐이크인 UWaveOscillatorCameraShakePattern 상속받아 Show용으로 만든 Calss.
 <br/>[Top](#File)<br/>
 
 #           ShowSystemEditor               #
 
-### EShowKeyType
-EShowKeyType은 Show Key의 종류를 정의한 Enum. 새로운 key를 추가할 경우 필히 enum을 추가해야함.
+### CameraPathPointCustom
+IPropertyTypeCustomization 상속받아서 FShowCamSequenceKey의 편집 Slate를 커스텀한 Class
 <br/>[Top](#File)<br/>
 
-### EShowKeyType
-EShowKeyType은 Show Key의 종류를 정의한 Enum. 새로운 key를 추가할 경우 필히 enum을 추가해야함.
+### ShowSequencerEditorHelper
+UShowSequencer 를 맴버로 가지고 있으며, 에디터에서 UShowSequenceAsset 데이터를 편집하기 위한 Helper Class.<br/>
+Add Key, Remove Key 등 현재 선택된 UShowSequenceAsset 의 데이터를 조작하는 용도의 Class.
 <br/>[Top](#File)<br/>
 
-### EShowKeyType
-EShowKeyType은 Show Key의 종류를 정의한 Enum. 새로운 key를 추가할 경우 필히 enum을 추가해야함.
+### ShowSequencerNotifyHook
+Detail View Window 에서 UShowSequenceAsset 의 데이터 변화를 감지하기 위한 Noti Class.
 <br/>[Top](#File)<br/>
 
-### EShowKeyType
-EShowKeyType은 Show Key의 종류를 정의한 Enum. 새로운 key를 추가할 경우 필히 enum을 추가해야함.
+### SShowCamSequenceDetailsWidget
+[Widget] UShowCamSequence 의 Detail View Window 에 카메라의 프리뷰 등 기능을 추가한 커스텀 Class.
 <br/>[Top](#File)<br/>
 
-### EShowKeyType
-EShowKeyType은 Show Key의 종류를 정의한 Enum. 새로운 key를 추가할 경우 필히 enum을 추가해야함.
+### SShowKeyBox
+[Widget] ShowMaker 툴에서 Show Key를 비쥬얼라이즈한 박스.
 <br/>[Top](#File)<br/>
+
+### SShowKeyBoxHandler
+[Widget] UShowSequenceAsset 에 있는 여러 Key를 SShowKeyBox 로 그려주는 Class.
+<br/>[Top](#File)<br/>
+
+### SShowKeyDetailsWidget
+[Widget] 선택된 Show Key의 상세 정보를 보여주는 위젯.
+<br/>[Top](#File)<br/>
+
+### SShowMakerWidget
+[Widget] UShowSequenceAsset 을 더블클릭하면 뜨는 위젯 / UShowSequenceAsset 의 플레이 확인 및 편집하는 최상위 위젯.
+<br/>[Top](#File)<br/>
+
+### SShowSequencerControllPanel
+[Widget] UShowSequencer 의 동작을 모은 위젯. Play, Pause, TimeScale 등.
+<br/>[Top](#File)<br/>
+
+### SShowSequencerEditHeader
+[Widget] Show Key의 정보를 보여주는 좌측에 표시되는 header. Key Add 버튼을 가지고 있음.
+<br/>[Top](#File)<br/>
+
+### SShowSequencerEditor
+[Widget] UShowSequenceAsset 의 기본 편집 위젯을 모아둔 Class.
+<br/>[Top](#File)<br/>
+
+### SShowSequencerScrubBoard
+[Widget] Show Key들의 플레이를 보여주는 Board를 그리는 위젯.
+<br/>[Top](#File)<br/>
+
+### GizmoTranslationComponent
+X, Y, Z 축으로 이동 표시를 지원하는 컴포넌트.
+<br/>[Top](#File)<br/>
+
+### ShowSequenceAssetCustomization
+IDetailCustomization 상속받아서 ShowSequenceAsset 의 Detail View 커스텀.
+<br/>[Top](#File)<br/>
+
 
